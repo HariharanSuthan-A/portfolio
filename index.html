@@ -3,79 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A. Hariharan | AI Developer Portfolio</title>
+    <title>Hariharan | AI Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">HARI</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <!-- Hero Section -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">HARI</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h4 class="subtitle">Hello, I'm</h4>
-                    <h1 class="title">A. Hariharan</h1>
-                    <h2 class="typing-text">AI Developer | AIaaS Specialist</h2>
-                    <p class="summary">Turning ideas into intelligent, deployable AI solutions that make an impact.</p>
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn-secondary">View My Work</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-image-container">
-                        <img src="images/profile.jpg" alt="Hariharan - AI/ML Developer" class="profile-image">
-                        <div class="profile-glow"></div>
-                    </div>
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="particle-container" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                <span class="status-text">AI Engineer &bull; GenAI &bull; LLM</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">Hariharan</span>
+                <span class="hero-tagline">Artificial Intelligence is built by human intelligence &mdash; Hari</span>
+            </h1>
+            <p class="hero-desc">AI Engineering undergraduate transforming research into production-ready systems. Building agentic workflows, advanced RAG pipelines, and fine-tuned LLMs.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">Explore My Work</a>
+                <a href="#contact" class="btn-outline">Get in Touch</a>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric">
+                    <span class="metric-num" data-target="8">0</span><span class="metric-suffix">+</span>
+                    <span class="metric-label">Projects</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
                 <div class="about-text">
-                    <p>My journey into technology started out of pure curiosity — just experimenting with a simple snake game that sparked a fascination with how computers work. That small spark grew into a passion for Artificial Intelligence, where logic meets creativity and ideas become intelligent systems.</p>
-                    <p>Today, I focus on building AI-powered SaaS solutions, fine-tuning language models, and developing AI agents that automate, assist, and create. I enjoy taking ideas from concept to deployment — turning them into real, usable products that make an impact. Passionate about LLMs, Agentic AI, and automation, I aim to leverage AI not just as a tool, but as a collaborator that enhances human potential and innovation.</p>
-                    
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <h4>B.Tech – Artificial Intelligence & Data Science</h4>
-                            <p>Chendhuran College of Engineering and Technology (2023 – Present)</p>
-                            <p>CGPA: 8.7 / 10</p>
+                    <p class="about-lead">Artificial Intelligence and Data Science undergraduate with hands-on experience in GenAI, RAG, and agentic workflows. Actively working with LangChain, LangGraph and LlamaIndex for AI orchestration and retrieval-based systems.</p>
+                    <p>Built practical projects spanning AI agents, fine-tuning pipelines, and automation tools, with a strong interest in LLMs, AI agents, and deploying real-world AI solutions. I aim to leverage AI not just as a tool, but as a collaborator that enhances human potential and innovation.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Karaikudi, Tamil Nadu, India</span>
                         </div>
-                        <div class="education-item">
-                            <h4>Computer Science – State Board</h4>
-                            <p>Alagappa Model Hr. Sec. School (2021 – 2023)</p>
-                            <p>Percentage: 87.9%</p>
+                        <div class="detail-item">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">B.Tech AI & Data Science (CGPA: 8.7)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Languages</span>
+                            <span class="detail-value">Tamil, English</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Focus</span>
+                            <span class="detail-value">GenAI, RAG, AI Agents, Fine-tuning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">hari@portfolio:~$</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat profile.py</span></div>
+                            <div class="terminal-line out"><span class="key">name</span>: <span class="string">"Hariharan"</span></div>
+                            <div class="terminal-line out"><span class="key">role</span>: <span class="string">"AI Engineer"</span></div>
+                            <div class="terminal-line out"><span class="key">expertise</span>: [<span class="string">"GenAI"</span>, <span class="string">"RAG"</span>, <span class="string">"AI Agents"</span>, <span class="string">"Fine-tuning"</span>]</div>
+                            <div class="terminal-line out"><span class="key">stack</span>: [<span class="string">"LangChain"</span>, <span class="string">"LangGraph"</span>, <span class="string">"LlamaIndex"</span>]</div>
+                            <div class="terminal-line out"><span class="key">status</span>: <span class="string green">"actively building"</span></div>
+                            <div class="terminal-line typing-line"><span class="prompt">$</span> <span class="cursor-blink">_</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h3 class="subsection-title">Education</h3>
+                <div class="edu-timeline">
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-content">
+                            <span class="edu-year">2023 &ndash; 2027</span>
+                            <h4>B.Tech &mdash; Artificial Intelligence & Data Science</h4>
+                            <p>Chendhuran College of Engineering and Technology</p>
+                            <span class="edu-cgpa">CGPA: 8.7 / 10</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-content">
+                            <span class="edu-year">2021 &ndash; 2023</span>
+                            <h4>Higher Secondary &mdash; Computer Science</h4>
+                            <p>Alagappa Model Hr. Sec. School, Karaikudi</p>
                         </div>
                     </div>
                 </div>
@@ -83,230 +139,296 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- SeproLM -->
-                <div class="project-card">
-                    <div class="project-image">
-                       
-                        <div class="project-tag">NLP • AI</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>SeproLM – LLM for SEO & Marketing</h3>
-                        <p>Advanced language model fine-tuned for SEO optimization and marketing content generation. Specialized in creating high-performing, SEO-optimized content with natural language understanding.</p>
-                        <div class="project-links">
-                            <a href="https://huggingface.co/Hariharan05/SeproLM" target="_blank" class="project-link"><i class="fab fa-huggingface"></i> Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photex AI -->
-                <div class="project-card">
-                    <div class="project-image">
-                        
-                        <div class="project-tag">AI • Computer Vision</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Photex AI – Image to Prompt Generator</h3>
-                        <p>Generate effective prompts from images to enhance AI-generated content creation. Converts visual concepts into detailed, AI-friendly text prompts for image generation models.</p>
-                        <div class="project-links">
-                            <a href="https://photexai.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        
-                        </div>
-                    </div>
-                </div>
-
-                <!-- License Plate Detection -->
-                <div class="project-card">
-                    <div class="project-image">
-                        
-                        <div class="project-tag">Computer Vision • AI</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Indian Vehicle License Plate Detection</h3>
-                        <p>Computer vision model for detecting and recognizing Indian license plates in images and video streams. Built with YOLO and OpenCV for real-time processing.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/HariharanSuthan-A/Bike-LP-Detector-" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DataTool -->
-                <div class="project-card">
-                    <div class="project-image">
-                        
-                        <div class="project-tag">Data Analysis • Python</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>DataTool – CSV Data Analyzer</h3>
-                        <p>Lightweight REPL-based analysis and visualization tool for quick data exploration. Features include statistical analysis, plotting, and data transformation capabilities.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/HariharanSuthan-A/Datatool" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Automations -->
-                <div class="project-card">
-                    <div class="project-image">
-                    
-                        <div class="project-tag">Automation • Google Apps Script</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Automation Suite</h3>
-                        <p>Payment verification and restaurant reservation system with automated booking and invoicing powered by Google Drive integration. Streamlines business operations with custom workflows.</p>
-                    </div>
-                </div>
-
-                <!-- FluidoAI -->
-                <div class="project-card">
-                    <div class="project-image">
-                        
-                        <div class="project-tag">Generative AI • Web App</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>FluidoAI – Text-to-Image Generator</h3>
-                        <p>Advanced text-to-image generation platform with customizable parameters for creative content creation. Built with Stable Diffusion and custom fine-tuning.</p>
-                        <div class="project-links">
-                            <a href="https://ai-image-010j.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- N8N Agents -->
-                <div class="project-card">
-                    <div class="project-image">
-                        
-                        <div class="project-tag">Automation • Workflow</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Agent Browser / N8N Agents</h3>
-                        <p>Workflow-based customer support and assistance automations. Custom nodes and workflows for N8N to create intelligent, automated customer service solutions.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ongoing Projects -->
-            <h2 class="section-title" style="margin-top: 8rem;">Ongoing Projects</h2>
-            <div class="projects-grid">
-                <!-- Uknowme -->
-                <div class="project-card ongoing">
-                    <div class="project-badge">In Development</div>
-                    <div class="project-image">
-                    
-                        <div class="project-tag">Social Platform • Web3</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Uknowme – Indie Developers' Platform</h3>
-                        <p>A community-driven platform for indie developers to share, connect, and collaborate on innovative projects. Features include project showcases, networking, and resource sharing.</p>
-                    </div>
-                </div>
-
-                <!-- TacusAI -->
-                <div class="project-card ongoing">
-                    <div class="project-badge">In Development</div>
-                    <div class="project-image">
-                        
-                        <div class="project-tag">No-Code • AI</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>TacusAI – Visual AI Agent Builder</h3>
-                        <p>A no-code platform for creating and deploying visual AI agents through an intuitive interface. Enables users to build custom AI solutions without writing code.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Core Areas</h3>
-                    <ul class="skills-list">
-                        <li>Machine Learning</li>
-                        <li>AI as a Service (AIaaS)</li>
-                        <li>LLMs & Prompt Engineering</li>
-                        <li>Fine-tuning & Prompt Tuning</li>
-                        <li>Image Processing</li>
-                        <li>Automations</li>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>LLMs & GenAI</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Prompt Engineering</li>
+                        <li>Retrieval-Augmented Generation</li>
+                        <li>AI Agents & Orchestration</li>
+                        <li>Text-to-SQL</li>
+                        <li>Fine-tuning (LoRA, QLoRA)</li>
+                        <li>Evaluation & Guardrails</li>
                     </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Tools & Libraries</h3>
-                    <ul class="skills-list">
-                        <li>Hugging Face</li>
-                        <li>LangChain</li>
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>LangChain & LangGraph</li>
+                        <li>LlamaIndex</li>
+                        <li>Unsloth</li>
                         <li>Transformers</li>
+                        <li>Flowise</li>
                         <li>PyTorch</li>
-                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>MCP</li>
+                        <li>n8n & Make</li>
+                        <li>Claude Code</li>
+                        <li>Cursor & Windsurf</li>
+                        <li>Hugging Face</li>
+                        <li>Git & GitHub</li>
                         <li>Docker</li>
                     </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Programming</h3>
-                    <ul class="skills-list">
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <ul class="skill-list">
                         <li>Python</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
                         <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
                     </ul>
+                </div>
+            </div>
+            <div class="cert-banner">
+                <span class="cert-banner-icon"><i class="fas fa-certificate"></i></span>
+                <div class="cert-banner-text">
+                    <strong>Certifications:</strong> Anthropic &mdash; Claude Code in Action &bull; TATA GenAI Certificate &bull; Hugging Face AI Agents &bull; AI & LLM Engineer Track (Ongoing)
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="agent">AI Agents</button>
+                <button class="filter-btn" data-filter="rag">RAG</button>
+                <button class="filter-btn" data-filter="finetune">Fine-tuning</button>
+                <button class="filter-btn" data-filter="tool">Tools</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="agent">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-content">
+                        <div class="project-cat">AI Agent</div>
+                        <h3>Smolbot</h3>
+                        <p>Personal AI Telegram agent with multi-turn chat, real-time web search, document Q&A (RAG), and local system file access. Built with LangChain and Telegram API.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>LangChain</span><span>Telegram API</span>
+                        </div>
+                        <a href="https://github.com/HariharanSuthan-A/Smolbot" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="agent">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-content">
+                        <div class="project-cat">Desktop AI</div>
+                        <h3>Pikabot</h3>
+                        <p>Desktop AI companion that assists with everyday tasks &mdash; automation, scheduling, web search. Features 15+ tools and 5+ skills for personal assistance.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>Desktop App</span><span>AI Agents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="finetune">
+                    <div class="project-content">
+                        <div class="project-cat">LLM Fine-tuning</div>
+                        <h3>EasyFinetuner</h3>
+                        <p>Python library wrapper for Unsloth and Transformers that automates training argument definitions based on dataset characteristics. Simplifies the fine-tuning workflow.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>Unsloth</span><span>Transformers</span>
+                        </div>
+                        <a href="https://github.com/HariharanSuthan-A/easy-fine-tuner" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="rag">
+                    <div class="project-content">
+                        <div class="project-cat">Medical RAG</div>
+                        <h3>Med-RAG</h3>
+                        <p>Scalable medication usage and clinical description retrieval system using LlamaIndex. Retrieves medication information from documents in the user's own language.</p>
+                        <div class="project-stack">
+                            <span>LlamaIndex</span><span>LangChain</span><span>RAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="rag">
+                    <div class="project-content">
+                        <div class="project-cat">Medical AI</div>
+                        <h3>Clinical Analysis Assistant</h3>
+                        <p>Real-time decision support automation built with LangChain and MedGemma 4B. Analyzes medical images (X-rays, CT scans, MRIs) and provides structured clinical insights.</p>
+                        <div class="project-stack">
+                            <span>LangChain</span><span>MedGemma 4B</span><span>Healthcare AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="tool">
+                    <div class="project-content">
+                        <div class="project-cat">Data Analysis</div>
+                        <h3>DataTool</h3>
+                        <p>Lightweight Python library for automated data visualization and rapid insight generation from CSV files. Features statistical analysis and plotting capabilities.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>Data Viz</span><span>Automation</span>
+                        </div>
+                        <a href="https://github.com/HariharanSuthan-A/Datatool" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="agent">
+                    <div class="project-content">
+                        <div class="project-cat">SQL Agent</div>
+                        <h3>Text-to-SQL Agent</h3>
+                        <p>Conversational SQL agent that converts natural language questions into SQL queries, executes them against SQLite databases, and returns responses in natural language.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>LLM</span><span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Research</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="research-grid">
+                <a href="https://medium.com/@hariharansuthan05/attenton-is-all-you-need-the-genesis-architecture-and-impact-of-the-transformer-0b654cb2dbcb" target="_blank" class="research-card">
+                    <div class="research-icon"><i class="fas fa-scroll"></i></div>
+                    <h3>Attention Is All You Need</h3>
+                    <p>A deep dive into the genesis, architecture, and impact of the Transformer model &mdash; the foundation of modern LLMs.</p>
+                    <span class="research-link">Read Article <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://medium.com/@hariharansuthan05/test-0fe3e9190233" target="_blank" class="research-card">
+                    <div class="research-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Emotional Intelligence in AI</h3>
+                    <p>An experiment comparing how leading LLMs respond to real-world emotional scenarios and their empathic capabilities.</p>
+                    <span class="research-link">Read Article <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://medium.com/@hariharansuthan05/handpicked-llms-a-14-day-experimental-study-on-multi-task-capability-prompt-control-and-output-c4347439eb3b" target="_blank" class="research-card">
+                    <div class="research-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Handpicked LLMs</h3>
+                    <p>A 14-day experimental study on multi-task capability, prompt control, and output consistency across leading language models.</p>
+                    <span class="research-link">Read Article <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:hariharansuthan05@gmail.com">hariharansuthan05@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+919345665486">+91 93456 65486</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Karaikudi, Tamil Nadu, India</span>
+                    <p class="contact-lead">Interested in collaborating, contributing to open-source, or discussing GenAI opportunities?</p>
+                    <div class="contact-items">
+                        <a href="mailto:hariharansuthan05@gmail.com" class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span class="contact-detail">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">hariharansuthan05@gmail.com</span>
+                            </span>
+                        </a>
+                        <a href="tel:+919345665486" class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            <span class="contact-detail">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 93456 65486</span>
+                            </span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="contact-detail">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Karaikudi, Tamil Nadu, India</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hari-haran-b51855320/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/HariharanSuthan-A" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/hari-haran-b51855320" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/HariharanSuthan-A" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:hariharansuthan05@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <label for="subject">Subject</label>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn-primary btn-submit">
+                        Send Message <i class="fas fa-arrow-right"></i>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 A. Hariharan. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">HARI</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Building the future of AI, Self learning AI Engineer </p>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Hariharan. All rights reserved.</span>
+                <span class="footer-sep">&bull;</span>
+                <span>Designed with <i class="fas fa-terminal"></i> in Tamil Nadu</span>
+            </div>
         </div>
     </footer>
 
