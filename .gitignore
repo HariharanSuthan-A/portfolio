@@ -1,0 +1,14 @@
+# Local notes, drafts and documentation (not part of the published site)
+*.md
+*.MD
+*.markdown
+*.MARKDOWN
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/

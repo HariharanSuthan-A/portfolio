@@ -6,30 +6,62 @@ document.addEventListener('DOMContentLoaded', () => {
     let mouseX = 0, mouseY = 0;
     let followerX = 0, followerY = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
-    });
+    if (cursor && follower) {
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+        });
 
-    function animateFollower() {
-        followerX += (mouseX - followerX) * 0.1;
-        followerY += (mouseY - followerY) * 0.1;
-        follower.style.left = followerX + 'px';
-        follower.style.top = followerY + 'px';
-        requestAnimationFrame(animateFollower);
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        document.querySelectorAll('a, button, .project-card, .skill-category, .research-card, .contact-item, .exp-card').forEach(el => {
+            el.addEventListener('mouseenter', () => follower.classList.add('hover'));
+            el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
+        });
     }
-    animateFollower();
 
-    document.querySelectorAll('a, button, .project-card, .skill-category, .research-card, .contact-item').forEach(el => {
-        el.addEventListener('mouseenter', () => follower.classList.add('hover'));
-        el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
-    });
+    // --- Theme toggle ---
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+    function updateThemeIcon() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (themeIcon) {
+            themeIcon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+        }
+        if (themeToggle) {
+            const label = isLight ? 'Switch to dark theme' : 'Switch to light theme';
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.setAttribute('title', label);
+        }
+    }
+
+    updateThemeIcon();
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            try {
+                localStorage.setItem('theme', next);
+            } catch (e) {}
+            updateThemeIcon();
+        });
+    }
 
     // --- Particles ---
     const particleContainer = document.getElementById('particles');
     if (particleContainer) {
-        for (let i = 0; i < 50; i++) {
+        const particleCount = window.matchMedia('(max-width: 768px)').matches ? 24 : 50;
+        for (let i = 0; i < particleCount; i++) {
             const p = document.createElement('div');
             p.className = 'particle';
             const size = Math.random() * 3 + 1;
@@ -49,17 +81,65 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    navToggle.setAttribute('role', 'button');
+    navToggle.setAttribute('tabindex', '0');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation menu');
+
+    function openMenu() {
+        navToggle.classList.add('active');
+        navMenu.classList.add('active');
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Close navigation menu');
+    }
+
+    function closeMenu() {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation menu');
+    }
+
     navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        if (navMenu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    navToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            navToggle.click();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navMenu.classList.contains('active')) return;
+        if (navMenu.contains(e.target) || navToggle.contains(e.target)) return;
+        closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            closeMenu();
+        }
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         });
     });
 
@@ -151,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll animations (Intersection Observer) ---
     const animateElements = document.querySelectorAll(
-        '.project-card, .skill-category, .edu-card, .research-card, .contact-item, .about-text, .terminal, .cert-banner'
+        '.project-card, .skill-category, .edu-card, .exp-card, .research-card, .contact-item, .about-text, .terminal, .cert-banner'
     );
 
     const scrollObserver = new IntersectionObserver((entries) => {
